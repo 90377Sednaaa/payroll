@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding-top: 60px;
+    padding-left: 290px;
+    padding-bottom: 60px;
+    padding-right: 60px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+
+
+.items {
+    background-color: rgb(33, 37, 41);
+    transition: background-color 0.15s;
+}
+
+.items:hover {
+    background-color: rgba(187, 180, 180, 0.438);
+}

@@ -1,0 +1,13 @@
+.info-card{
+    display: flex;
+    border-radius: 30px;
+    margin-right: 20px;
+    width: 500px;
+    height: 170px;
+    cursor: default
+}
+
+.Labels{
+    margin-top: 20px;
+    margin-left: 20px;
+}
