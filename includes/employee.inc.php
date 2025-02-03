@@ -39,25 +39,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_POST['edit-employee-id']) 
 }
 
 // Edit Employee
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit-employee-id'], $_POST['ename'], $_POST['email'], $_POST['epassword'], $_POST['hire_date'], $_POST['eposition'], $_POST['eschedule'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit-employee-id'], $_POST['ename'], $_POST['email'], $_POST['hire_date'], $_POST['eposition'], $_POST['eschedule'])) {
     $employeeId = (int)$_POST['edit-employee-id'];
     $employeeName = trim($_POST['ename']);
     $employeeEmail = trim($_POST['email']);
-    $employeePassword = password_hash($_POST['epassword'], PASSWORD_DEFAULT);
+    $epassword = trim($_POST['epassword']);
     $hireDate = $_POST['hire_date'];
     $positionId = (int)$_POST['eposition'];
     $scheduleId = (int)$_POST['eschedule'];
 
+    // Prepare fields and parameters for SQL update
+    $fields = [
+        'employee_name = :name',
+        'employee_email = :email',
+        'hire_date = :hire_date',
+        'position_id = :position_id',
+        'schedule_id = :schedule_id'
+    ];
+    $params = [
+        ':name' => $employeeName,
+        ':email' => $employeeEmail,
+        ':hire_date' => $hireDate,
+        ':position_id' => $positionId,
+        ':schedule_id' => $scheduleId
+    ];
+
+    // Add password to update only if provided
+    if (!empty($epassword)) {
+        $fields[] = 'employee_password = :password';
+        $params[':password'] = password_hash($epassword, PASSWORD_DEFAULT);
+    }
+
+    // Create dynamic SQL query
+    $sql = "UPDATE Employees SET " . implode(', ', $fields) . " WHERE employee_id = :id";
+    $params[':id'] = $employeeId;
+
     try {
-        $stmt = $pdo->prepare("UPDATE Employees SET employee_name = :name, employee_email = :email, employee_password = :password, hire_date = :hire_date, position_id = :position_id, schedule_id = :schedule_id WHERE employee_id = :id");
-        $stmt->bindParam(':id', $employeeId);
-        $stmt->bindParam(':name', $employeeName);
-        $stmt->bindParam(':email', $employeeEmail);
-        $stmt->bindParam(':password', $employeePassword);
-        $stmt->bindParam(':hire_date', $hireDate);
-        $stmt->bindParam(':position_id', $positionId);
-        $stmt->bindParam(':schedule_id', $scheduleId);
-        $stmt->execute();
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute($params);
         $_SESSION['success'] = "Employee updated successfully!";
         header("Location: ../Admin-Panel/employee.php");
         exit();
