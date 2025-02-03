@@ -1,11 +1,10 @@
 body{
+    background-color: rgb(255, 255, 255);
     margin: 0;
     padding-top: 60px;
     padding-left: 290px;
     padding-bottom: 60px;
-    padding-right: 60px;
-    background-color: rgb(255, 255, 255);
-    
+    padding-right: 60px; 
 }
 
 

@@ -1,0 +1,39 @@
+.clock-container {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    height: 450px;
+   
+}
+
+.time {
+    font-size: 8rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: #000000;
+    text-shadow: 0 0 10px rgba(197, 207, 197, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.date {
+    font-size: 1.5rem;
+    color: #888;
+}
+
+.buttons-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    border-style: none;
+    font-weight: 400;
+}
