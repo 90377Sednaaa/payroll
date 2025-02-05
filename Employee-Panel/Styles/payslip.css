@@ -1,0 +1,53 @@
+.payslip-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.button{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    border-style: none;
+    background-color: rgb(35, 216, 125);
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.button:hover{
+    color: rgb(253, 253, 253);
+}
+
+.button:active{
+    opacity: 0.3;
+}
+
+.employee-info{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.details-container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    width: 300px;
+}
+
+
+
+
+

@@ -32,7 +32,7 @@ require '../includes/attendance.inc.php';
         <a class="nav-link text-start text-white active" href="../Employee-Panel/attendance.php">Attendance</a>
       </li>
       <li class="nav-item items">
-        <a class="nav-link text-start text-white" href="../Employee-Panel/pay-slip.php">Pay Slip</a>
+        <a class="nav-link text-start text-white" href="../Employee-Panel/payslip.php">Payslip</a>
       </li>
     </ul>
     <div class="container">

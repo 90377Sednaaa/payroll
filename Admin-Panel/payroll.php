@@ -103,7 +103,7 @@ try {
   <div class="container">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create-payroll">Create Payroll</button>
 
-    <!-- Create Payroll Modal -->
+
     <!-- Create Payroll Modal -->
     <div class="modal fade" id="create-payroll" tabindex="-1">
       <div class="modal-dialog">
@@ -116,6 +116,7 @@ try {
             </div>
             <div class="modal-body">
               <div class="mb-3">
+                <label class="form-label">Employee:</label>
                 <select class="form-select" name="employee_id" required>
                   <option value="">Select Employee</option>
                   <?php foreach ($employees as $employee): ?>
@@ -124,12 +125,15 @@ try {
                 </select>
               </div>
               <div class="mb-3">
+                <label class="form-label">Pay Start:</label>
                 <input type="date" class="form-control" name="pay_start" required>
               </div>
               <div class="mb-3">
+                <label class="form-label">Pay End:</label>
                 <input type="date" class="form-control" name="pay_end" required>
               </div>
               <div class="mb-3">
+                <label class="form-label">Select Deduction <small> &lpar; <span style="color: red; font-weight: bold;">ctrl + click</span> for multiple deductions &rpar;</small> :</label>
                 <select class="form-select" name="deduction_ids[]" multiple required>
                   <?php foreach ($deductions as $deduction): ?>
                     <option value="<?= $deduction['deduction_id'] ?>">
@@ -201,6 +205,7 @@ try {
                       </div>
                       <div class="modal-body">
                         <div class="mb-3">
+                          <label class="form-label">Employee:</label>
                           <select class="form-select" name="employee_id" required>
                             <?php foreach ($employees as $employee): ?>
                               <option value="<?= $employee['employee_id'] ?>"
@@ -211,14 +216,17 @@ try {
                           </select>
                         </div>
                         <div class="mb-3">
+                          <label class="form-label">Pay Start:</label>
                           <input type="date" class="form-control" name="pay_start"
                             value="<?= $payroll['pay_period_start'] ?>" required>
                         </div>
                         <div class="mb-3">
+                          <label class="form-label">Pay End:</label>
                           <input type="date" class="form-control" name="pay_end"
                             value="<?= $payroll['pay_period_end'] ?>" required>
                         </div>
                         <div class="mb-3">
+                          <label class="form-label">Select Deduction <small> &lpar;  <span style="color: red; font-weight: bold;"> ctrl + click </span> for multiple deductions &rpar;</small> :</label>
                           <select class="form-select" name="deduction_ids[]" multiple required>
                             <?php
                             // Fetch applied deductions for this payroll
