@@ -15,34 +15,35 @@ require '../includes/department.inc.php';
 </head>
 
 <body>
-  <div class="d-flex flex-column position-fixed bot bg-dark vh-100 top-0 start-0" style="width: 220px">
+  <div class="d-flex flex-column position-fixed bot bg-dark vh-100 top-0 start-0" style="width: 250px">
     <div class="container-fluid text-center">
-      <h1 class="text-white text-center mt-4">Admin</h1>
+      <img src="../images/Payroll.png" class="img-fluid mt-3" style="width: 120px" />
+      <h1 class="text-white">Admin</h1>
     </div>
     <div class="container">
       <hr class="text-white" />
     </div>
     <ul class="nav nav-pills flex-column mb-auto text-white">
-      <li class="nav-item">
-        <a class="nav-link text-start text-white" href="../Admin-Panel/dashboard.php">Dashboard</a>
+      <li class="nav-item items">
+        <a class="nav-link d-flex align-items-center text-white" href="../Admin-Panel/dashboard.php"> <img src="../images/dashboard.png" class="me-2" style="width: 20px;"> Dashboard</a>
       </li>
       <li class="nav-item items">
-        <a class="nav-link text-white" href="../Admin-Panel/employee.php">Employee</a>
+        <a class="nav-link d-flex align-items-center text-white" href="../Admin-Panel/employee.php"> <img src="../images/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" class="me-2" style="width: 20px;"> Employee</a>
       </li>
       <li class="nav-item items">
-        <a class="nav-link text-white" href="../Admin-Panel/schedules.php">Schedules</a>
+        <a class="nav-link d-flex align-items-center text-white " href="../Admin-Panel/schedules.php"> <img src="../images/schedule_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" class="me-2" style="width: 20px;"> Schedules</a>
       </li>
       <li class="nav-item items">
-        <a class="nav-link text-white active" href="../Admin-Panel/department.php">Department</a>
+        <a class="nav-link d-flex align-items-center text-white active" href="../Admin-Panel/department.php"> <img src="../images/badge_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" class="me-2" style="width: 20px;"> Department</a>
       </li>
       <li class="nav-item items">
-        <a class="nav-link text-white" href="../Admin-Panel/position.php">Position</a>
+        <a class="nav-link d-flex align-items-center text-white" href="../Admin-Panel/position.php"> <img src="../images/sentiment_satisfied_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" class="me-2" style="width: 20px;"> Position</a>
       </li>
       <li class="nav-item items">
-        <a class="nav-link text-white" href="../Admin-Panel/deductions.php">Deductions</a>
+        <a class="nav-link d-flex align-items-center text-white" href="../Admin-Panel/deductions.php"> <img src="../images/price_change_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" class="me-2" style="width: 20px;"> Deductions</a>
       </li>
       <li class="nav-item items">
-        <a class="nav-link text-white" href="../Admin-Panel/payroll.php">Payroll</a>
+        <a class="nav-link d-flex align-items-center text-white" href="../Admin-Panel/payroll.php"> <img src="../images/payments_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" class="me-2" style="width: 20px;"> Payroll</a>
       </li>
     </ul>
     <div class="container">
@@ -53,13 +54,14 @@ require '../includes/department.inc.php';
     </div>
   </div>
 
-  <div class="container">
-    <h1 class="mb-5"><strong>Departments</strong></h1>
+  <div class="container d-flex align-items-center mb-5">
+    <img src="../images/dark icons/badge_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" class="me-2" style="width: 50px;" />
+    <h1 class=""><strong>Departments</strong></h1>
   </div>
 
   <!-- Add Department Button and Modal -->
   <div class="container">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-department">Add Department</button>
+    <button type="button" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#add-department"> <img class="me-2" style="width: 20px;" src="../images/add_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"> Department</button>
 
     <!-- Add Department Modal -->
     <div class="modal fade" id="add-department" tabindex="-1">

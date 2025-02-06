@@ -52,6 +52,7 @@ require '../includes/payslip.inc.php';
             <label class="mb-2 ps-1 h5" for="payrolls">Available payrolls</label>
             <form action="" method="post">
                 <select class="form-select" style="width: 400px" id="payrolls" name="payroll_id">
+                    <option value="">Select a payroll</option>
                     <?php
                     try {
                         $stmt = $pdo->prepare("SELECT pay_id, pay_period_start, pay_period_end FROM Payroll WHERE employee_id = :employee_id ORDER BY pay_period_start DESC");
@@ -70,7 +71,7 @@ require '../includes/payslip.inc.php';
                         </option>
                     <?php endforeach; ?>
                 </select>
-                <button type="submit" class="button mt-3">Request Payslip</button>
+                <button type="submit" class="btn btn-primary mt-4">Request Payslip</button>
             </form>
         </div>
     </div>
@@ -79,7 +80,7 @@ require '../includes/payslip.inc.php';
 
     <!-- Payslip Display -->
     <?php if (isset($payroll)): ?>
-        <div class="payslip-container shadow-sm">
+        <div class="payslip-container shadow-lg" >
             <h1 class="text-center">Payslip</h1>
             <h6 class="text-center">Company Name Inc.</h6>
             <h6 class="text-center">Matina Aplaya, Davao City.</h6>
@@ -91,11 +92,11 @@ require '../includes/payslip.inc.php';
                     </div>
                     <div class="details">
                         <h6>Pay Period Start</h6>
-                        <h6>: <?= $payroll['pay_period_start'] ?? 'N/A'; ?></h6>
+                        <h6>: <?= date('Y-m-d', strtotime($payPeriodStart)) ?? 'N/A'; ?></h6>
                     </div>
                     <div class="details">
                         <h6>Pay Period End</h6>
-                        <h6>: <?= $payroll['pay_period_end'] ?? 'N/A'; ?></h6>
+                        <h6>: <?= date('Y-m-d', strtotime($payPeriodEnd)) ?? 'N/A'; ?></h6>
                     </div>
                 </div>
                 <div class="details-container">
@@ -124,13 +125,13 @@ require '../includes/payslip.inc.php';
                     <tbody>
                         <tr>
                             <td>Basic Salary</td>
-                            <td><?= $payroll['gross_pay'] ?? 'N/A'; ?></td>
+                            <td><?= $grossPay ?? 'N/A'; ?></td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td style="font-weight: bold;">Total Earnings</td>
-                            <td><?= $payroll['gross_pay'] ?? 'N/A'; ?></td>
+                            <td><?= $grossPay ?? 'N/A'; ?></td>
                         </tr>
                     </tfoot>
                 </table>
