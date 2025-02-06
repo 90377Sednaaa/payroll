@@ -19,20 +19,21 @@ require '../includes/employee-dashboard.inc.php';
 <body>
     <div class="d-flex flex-column position-fixed bot bg-dark vh-100 top-0 start-0" style="width: 220px">
         <div class="container-fluid text-center">
-            <h1 class="text-white text-center mt-4">Employee</h1>
+            <img src="../images/Payroll.png" class="img-fluid mt-3" style="width: 120px" />
+            <h1 class="text-white text-center mt-2">Employee</h1>
         </div>
         <div class="container">
             <hr class="text-white" />
         </div>
         <ul class="nav nav-pills flex-column mb-auto text-white">
             <li class="nav-item">
-                <a class="nav-link text-start active" href="../Employee-Panel/employee-dashboard.php">Dashboard</a>
+                <a class="nav-link d-flex align-items-center active" href="../Employee-Panel/employee-dashboard.php"> <img src="../images/dashboard.png" class="me-2" style="width: 20px;"> Dashboard</a>
             </li>
             <li class="nav-item items">
-                <a class="nav-link text-start text-white" href="../Employee-Panel/attendance.php">Attendance</a>
+                <a class="nav-link d-flex align-items-center text-white" href="../Employee-Panel/attendance.php"> <img src="../images/event_available_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" class="me-2" style="width: 20px;"> Attendance</a>
             </li>
             <li class="nav-item items">
-                <a class="nav-link text-start text-white" href="../Employee-Panel/payslip.php">Payslip</a>
+                <a class="nav-link d-flex align-items-center text-white" href="../Employee-Panel/payslip.php"> <img src="../images/receipt_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" class="me-2" style="width: 20px;"> Payslip</a>
             </li>
         </ul>
         <div class="container">
@@ -43,8 +44,9 @@ require '../includes/employee-dashboard.inc.php';
         </div>
     </div>
 
-    <div class="container">
-        <h1 class="mb-5"><strong>Dashboard</strong></h1>
+    <div class="container d-flex align-items-center mb-5">
+    <img src="../images/dark icons/dataset_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" class="me-2" style="width: 50px;" />
+        <h1 class=""><strong>Dashboard</strong></h1>
     </div>
 
     <!-- Employee Information -->
