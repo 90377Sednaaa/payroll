@@ -22,7 +22,7 @@ background: linear-gradient(90deg, rgba(59,58,77,1) 0%, rgba(54,220,254,1) 0%, r
 			</div>
 			<div class="col mt-4">
 				<h1 class="text-dark text-center mt-3">Log In</h1>
-				<h4 class="text-dark text-center">Welcome Back</h3>
+				
 					<div>
 						<form action="../includes/login.php" method="post" >
 							<div class="mb-3">

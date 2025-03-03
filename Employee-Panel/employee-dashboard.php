@@ -52,7 +52,7 @@ require '../includes/employee-dashboard.inc.php';
     <!-- Employee Information -->
     <div class="container d-flex">
         <div class="info-card" style="background-color: rgb(165, 144, 241);">
-            <div>
+            <div class="">
                 <h1 class="Labels">Welcome Back!</h1>
                 <div>
                     <h3 class="ms-4 mt-4"><?php echo htmlspecialchars($employee['employee_name']); ?></h3>

@@ -10,6 +10,7 @@
 
 <body style="background: rgb(59,58,77);
 background: linear-gradient(90deg, rgba(59,58,77,1) 0%, rgba(54,220,254,1) 0%, rgba(0,0,255,1) 100%);">
+
 	<div class="container-fluid d-flex justify-content-center align-items-center vh-100 ">
 		<div class="row bg-white shadow box-shadow" style="border-radius: 10px;">
 			<div class="col" style="background-color: rgb(10, 147, 226); border-radius: 10px;">

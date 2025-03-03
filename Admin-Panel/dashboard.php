@@ -62,40 +62,44 @@ require '../includes/dashboard.inc.php';
 
   <div class="container d-flex align-items-center mb-5">
     <img src="../images/dark icons/dataset_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" class="me-2" style="width: 50px;" />
-    <h1 ><strong>Dashboard</strong></h1>
+    <h1><strong>Dashboard</strong></h1>
   </div>
-  <div class="container py-4">
+  <div class="container center py-4">
     <div class="row gap-0 column-gap-3 gx-3">
-      <div class="col-md-5 card-container mb-3 bg-info">
+      <div class="col-md-5 card-container mb-3 bg-info shadow">
         <div class="ps-4 pt-3">
           <h1 class="mb-0">Welcome Back!</h1>
         </div>
         <div class="ps-4 pt-2">
-          <h3><?php echo htmlspecialchars($adminName); ?></h3>
+          <h2><?php echo htmlspecialchars($adminName); ?></h2>
         </div>
       </div>
-      <div class="col-md-5 card-container bg-success">
-        <div class="ps-4 pt-3">
+      <div class="col-md-5 card-container bg-success shadow">
+        <div class="ps-4 pt-3 d-flex align-items-center">
+          <img src="../images/dark icons/person_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" class="me-2" style="width: 50px;" />
           <h1 class="mb-0">Number of Employees</h1>
         </div>
-        <div class="ps-4 pt-2">
-          <h3><?php echo $numEmployees; ?></h3>
+        <div class="ps-4 pt-2 ms-3 d-flex align-items-center">
+
+          <h2><?php echo $numEmployees; ?></h2>
         </div>
       </div>
-      <div class="col-md-5 card-container" style="background-color: rgb(188, 166, 209);">
-        <div class="ps-4 pt-3">
+      <div class="col-md-5 card-container shadow" style="background-color: rgb(188, 166, 209);">
+        <div class="ps-4 pt-3 d-flex align-items-center">
+          <img src="../images/dark icons/badge_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" class="me-2" style="width: 50px;" />
           <h1 class="mb-0">Number of Departments</h1>
         </div>
-        <div class="ps-4 pt-2">
-          <h3><?php echo $numDepartments; ?></h3>
+        <div class="ps-4 pt-2 ms-3">
+          <h2><?php echo $numDepartments; ?></h2>
         </div>
       </div>
-      <div class="col-md-5 card-container" style="background-color: rgb(209, 101, 151);">
-        <div class="ps-4 pt-3">
+      <div class="col-md-5 card-container shadow" style="background-color: rgb(209, 101, 151);">
+        <div class="ps-4 pt-3 d-flex align-items-center">
+          <img src="../images/dark icons/sentiment_satisfied_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" class="me-2" style="width: 50px;" />
           <h1 class="mb-0">Number of Positions</h1>
         </div>
-        <div class="ps-4 pt-2">
-          <h3><?php echo $numPositions; ?></h3>
+        <div class="ps-4 pt-2 ms-3">
+          <h2><?php echo $numPositions; ?></h2>
         </div>
       </div>
     </div>
