@@ -7,7 +7,6 @@ if (!isset($_SESSION['admin_id'])) {
     exit();
 }
 
-// Include database connection
 require 'dbhc.inc.php';
 
 // Add Schedule

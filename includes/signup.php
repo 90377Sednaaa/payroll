@@ -1,15 +1,12 @@
 <?php
-// Include the database connection
 require 'dbhc.inc.php';
 
-// Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get form data
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Validate input (basic validation)
+    // Validate input 
     if (empty($name) || empty($email) || empty($password)) {
         die("All fields are required.");
     }
@@ -32,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("Database error: " . $e->getMessage());
     }
 
-    // Hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert the new admin into the Admin table
@@ -44,14 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'password' => $hashedPassword
         ]);
 
-        // Redirect to a success page or login page
         header("Location: /payroll/login-form/login-form.php?signup=success");
         exit();
     } catch (PDOException $e) {
         die("Database error: " . $e->getMessage());
     }
 } else {
-    // Redirect back to the signup page if the form is not submitted
     header("Location: ../index.php");
     exit();
 }

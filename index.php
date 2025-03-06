@@ -54,9 +54,9 @@ background: linear-gradient(90deg, rgba(59,58,77,1) 0%, rgba(54,220,254,1) 0%, r
 		document.getElementById('show_password').addEventListener('change', function() {
 			var passwordField = document.getElementById('password');
 			if (this.checked) {
-				passwordField.type = 'text'; // Show password
+				passwordField.type = 'text'; 
 			} else {
-				passwordField.type = 'password'; // Hide password
+				passwordField.type = 'password'; 
 			}
 		});
 	</script>

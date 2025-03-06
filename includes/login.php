@@ -33,7 +33,7 @@ try {
         exit();
     }
 
-    // Check Employee Credentials if Admin Check Fails
+    // Check Employee if wala sa admin 
     $stmt = $pdo->prepare("SELECT employee_id, employee_password FROM Employees WHERE employee_email = :email");
     $stmt->bindParam(':email', $email);
     $stmt->execute();

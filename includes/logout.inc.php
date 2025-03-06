@@ -1,8 +1,7 @@
 <?php
 session_start();
-$_SESSION = array(); // Clear all session variables
-session_destroy(); // Destroy session
-// Clear session cookie
+$_SESSION = array(); 
+session_destroy(); 
 if (ini_get('session.use_cookies')) {
     $params = session_get_cookie_params();
     setcookie(session_name(), '', time() - 4200, 

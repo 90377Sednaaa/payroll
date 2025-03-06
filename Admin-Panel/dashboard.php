@@ -71,7 +71,7 @@ require '../includes/dashboard.inc.php';
           <h1 class="mb-0">Welcome Back!</h1>
         </div>
         <div class="ps-4 pt-2">
-          <h2><?php echo htmlspecialchars($adminName); ?></h2>
+        <h2><?php echo htmlspecialchars($adminName); ?></h2>
         </div>
       </div>
       <div class="col-md-5 card-container bg-success shadow">

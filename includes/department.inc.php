@@ -7,7 +7,6 @@ if (!isset($_SESSION['admin_id'])) {
     exit();
 }
 
-// Database connection
 require 'dbhc.inc.php';
 
 // Add Department

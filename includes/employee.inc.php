@@ -7,7 +7,6 @@ if (!isset($_SESSION['admin_id'])) {
     exit();
 }
 
-// Database connection
 require 'dbhc.inc.php';
 
 // Add Employee
@@ -48,7 +47,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit-employee-id'], $
     $positionId = (int)$_POST['eposition'];
     $scheduleId = (int)$_POST['eschedule'];
 
-    // Prepare fields and parameters for SQL update
     $fields = [
         'employee_name = :name',
         'employee_email = :email',
@@ -56,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit-employee-id'], $
         'position_id = :position_id',
         'schedule_id = :schedule_id'
     ];
+
     $params = [
         ':name' => $employeeName,
         ':email' => $employeeEmail,
