@@ -1,7 +1,7 @@
 <?php
 require '../includes/payroll.inc.php';
 
-// Fetch payroll entries with dynamically calculated deductions
+// Fetch payroll entries with calculated deductions
 try {
   $stmt = $pdo->query("
       SELECT 
@@ -230,7 +230,6 @@ try {
                           <label class="form-label">Select Deduction <small> &lpar;  <span style="color: red; font-weight: bold;"> ctrl + click </span> for multiple deductions &rpar;</small> :</label>
                           <select class="form-select" name="deduction_ids[]" multiple required>
                             <?php
-                            // Fetch applied deductions for this payroll
                             $stmt = $pdo->prepare("SELECT deduction_id FROM PayrollDeductions WHERE pay_id = ?");
                             $stmt->execute([$payroll['pay_id']]);
                             $appliedDeductions = $stmt->fetchAll(PDO::FETCH_COLUMN, 0);

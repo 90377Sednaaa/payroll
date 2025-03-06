@@ -117,7 +117,6 @@ require '../includes/position.inc.php';
             <td><?php echo $position['hourly_rate']; ?></td>
             <td><?php echo htmlspecialchars($position['department_name']); ?></td>
             <td>
-              <!-- Edit Button -->
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit-position-<?php echo $position['position_id']; ?>">Edit</button>
 
               <!-- Edit Position Modal -->
@@ -156,8 +155,6 @@ require '../includes/position.inc.php';
                   </div>
                 </div>
               </div>
-
-              <!-- Delete Button -->
               <a href="../includes/position.inc.php?delete-id=<?php echo $position['position_id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this position?')">Delete</a>
             </td>
           </tr>
@@ -185,7 +182,6 @@ require '../includes/position.inc.php';
     <?php unset($_SESSION['error']); ?>
   <?php endif; ?>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 

@@ -96,7 +96,7 @@ try {
                 <input type="time" class="form-control" id="timeIn" name="time_in" required>
               </div>
               <div class="mb-3">
-                <label for="timeOut" class="form-label">Time Out</label> <!-- Fixed label here -->
+                <label for="timeOut" class="form-label">Time Out</label> 
                 <input type="time" class="form-control" id="timeOut" name="time_out" required>
               </div>
               <button type="submit" class="btn btn-primary mt-4">Submit</button>
