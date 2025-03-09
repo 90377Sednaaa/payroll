@@ -89,7 +89,6 @@ try {
     <h1 class=""><strong>Employees</strong></h1>
   </div>
 
-  <!-- Add Employee Button and Modal -->
   <div class="container">
     <button type="button" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#add-employee"> <img class="me-2" style="width: 20px;" src="../images/add_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"> Employee</button>
 
@@ -262,13 +261,10 @@ try {
     <?php unset($_SESSION['error']); ?>
   <?php endif; ?>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script>
     function togglePasswordVisibility(checkbox) {
-      // Find the closest parent form-check element
       const formCheck = checkbox.closest('.form-check');
-      // Find the password input within the same form group
       const passwordInput = formCheck.previousElementSibling.querySelector('.password-input');
       passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
     }
